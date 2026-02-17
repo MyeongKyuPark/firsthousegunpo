@@ -1,0 +1,95 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Add styles here */
+
+:root {
+  --color-primary: 255, 107, 157; /* #FF6B9D */
+  --color-secondary: 255, 229, 229; /* #FFE5E5 */
+  --color-accent: 255, 153, 153; /* #FF9999 */
+  --color-background: 247, 250, 252; /* #F7FAFC */
+  --color-text: 45, 55, 72; /* #2D3748 */
+}
+
+.dark {
+  --color-primary: 255, 107, 157; /* Keep primary the same for brand consistency */
+  --color-secondary: 64, 76, 91; /* Darker secondary for contrast */
+  --color-accent: 255, 153, 153; /* Keep accent the same */
+  --color-background: 23, 27, 34; /* Dark background, slightly off black */
+  --color-text: 203, 213, 224; /* Light grey text */
+}
+
+/* Base styles for the theme toggle button */
+.theme-toggle {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: rgb(var(--color-text)); /* Use theme text color */
+  margin-left: 1rem; /* Adjust as needed */
+  padding: 0.5rem;
+  border-radius: 0.25rem;
+  transition: background-color 0.3s ease;
+}
+
+.theme-toggle:hover {
+  background-color: rgba(var(--color-text), 0.1);
+}
+
+/* Basic body background and text color to demonstrate theme switching */
+body {
+  background-color: rgb(var(--color-background));
+  color: rgb(var(--color-text));
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Override existing styles that might hardcode colors */
+/* This will likely be the most challenging part as I don't have the original CSS */
+/* I'll add some generic overrides, but proper integration requires the original CSS */
+#navbar {
+    background-color: rgb(var(--color-background));
+    border-bottom: 1px solid rgba(var(--color-text), 0.1);
+}
+
+#navbar .logo {
+    color: rgb(var(--color-text));
+}
+
+#navbar .nav-links a {
+    color: rgb(var(--color-text));
+}
+
+#navbar .btn-kakao {
+    background-color: rgb(var(--color-primary));
+    color: rgb(var(--color-background));
+}
+
+/* Update for sections */
+.section {
+    background-color: rgb(var(--color-background));
+    color: rgb(var(--color-text));
+}
+
+.section-header h3, .section-header p {
+    color: inherit; /* Ensure they pick up the section text color */
+}
+
+.room-card, .feature-item, .security-card {
+    background-color: rgba(var(--color-background), 0.8); /* Slightly different background for cards */
+    border: 1px solid rgba(var(--color-text), 0.1);
+}
+
+.room-card h4, .feature-item h4, .security-card h3 {
+    color: inherit;
+}
+
+.utility-banner {
+    background-color: rgba(var(--color-secondary), 0.5);
+    color: rgb(var(--color-text));
+}
+
+footer {
+    background-color: rgb(var(--color-background));
+    color: rgb(var(--color-text));
+}
