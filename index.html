@@ -294,6 +294,22 @@
         </div>
     </section>
 
+    <!-- NEW FORMSPREE CONTACT FORM SECTION -->
+    <section id="contact-form" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h3>입실문의</h3>
+                <p>궁금한 점을 남겨주시면 빠르게 답변드리겠습니다.</p>
+            </div>
+            <form id="admission-form" action="https://formspree.io/f/xeelkyby" method="POST">
+                <input type="text" name="name" placeholder="이름" required>
+                <input type="email" name="_replyto" placeholder="이메일" required>
+                <textarea name="message" placeholder="문의 내용을 입력해주세요." rows="5" required></textarea>
+                <button type="submit">문의하기</button>
+            </form>
+        </div>
+    </section>
+
     <footer id="contact">
         <div class="container">
             <h3>상담 및 입실 문의</h3>
@@ -306,7 +322,7 @@
         </div>
     </footer>
 
-    <script src="js/main.js"></script>
+    <script src="js/main.js" type="module"></script>
 </body>
 
 </html>
